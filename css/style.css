@@ -19,6 +19,7 @@
 }
 
 /* General Styles */
+
 body {
 	max-width: 100%;
 	height: 100vh;
@@ -228,5 +229,64 @@ header {
 
 	to {
 		opacity: 1;
+	}
+}
+
+/* Media Queries */
+
+@media all and (min-width: 700px) {
+	.title h1 {
+		font-size: 5rem;
+	}
+
+	.title p {
+		font-size: 2rem;
+	}
+
+	.socials a {
+		font-size: 2rem;
+		text-decoration: none;
+	}
+}
+
+@media all and (min-width: 1000px) {
+	main {
+		display: flex;
+		flex-flow: row;
+		max-height: 100vh;
+	}
+
+	main img {
+		width: 70%;
+	}
+
+	header {
+		width: 30%;
+	}
+	.title h1 {
+		font-size: 3rem;
+	}
+}
+
+@media all and (min-height: 1000px) and (orientation: landscape) {
+	main {
+		display: flex;
+		flex-flow: row;
+		max-height: 100vh;
+	}
+
+	main img {
+		width: 70%;
+	}
+
+	header {
+		width: 30%;
+	}
+	.title h1 {
+		font-size: 3rem;
+	}
+
+	.btn {
+		width: 100%;
 	}
 }
