@@ -146,6 +146,11 @@ header {
 	padding: 1rem;
 	border-radius: 50%;
 	color: rgba(255, 255, 255, 0.8);
+	transition: transform 0.2s ease-in-out;
+}
+
+.profile-description .socials i:hover {
+	transform: scale(115%);
 }
 
 .fa-linkedin-in {
@@ -220,6 +225,7 @@ header {
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	animation-delay: 1s;
+	transition: transform 0.5s ease-in-out;
 }
 
 @keyframes button {
@@ -230,6 +236,10 @@ header {
 	to {
 		opacity: 1;
 	}
+}
+
+.btn:hover {
+	transform: scale(90%);
 }
 
 /* Media Queries */
