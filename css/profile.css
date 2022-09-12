@@ -130,20 +130,38 @@ body {
 
 .split-photos {
 	margin: 1rem 0;
+	padding: 1rem;
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	width: 50%;
+	width: 100%;
 	gap: 1rem;
+	animation: split 1s forwards ease-in-out;
+	animation-timing-function: linear;
+	position: relative;
+	opacity: 0;
+}
+
+@keyframes split {
+	from {
+		opacity: 0;
+		bottom: -8rem;
+	}
+
+	to {
+		opacity: 1;
+		bottom: 0;
+	}
 }
 
 .split-photos img {
-	width: 70%;
+	width: 40%;
 	border-radius: 20px;
 }
 
 .info {
-	width: 100%;
+	width: 40%;
 	padding: 0.5rem;
 	display: flex;
 	flex-direction: column;
@@ -153,7 +171,7 @@ body {
 	border-radius: 10px;
 }
 
-.info p {
+.info .email {
 	margin: 0.5rem 0;
 }
 .socials {
@@ -173,6 +191,18 @@ body {
 	font-size: 1.5rem;
 	font-weight: 700;
 	line-height: 1.5;
+	animation: appear 0.7s forwards 1s linear;
+	opacity: 0;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 .main-header-content {
@@ -187,6 +217,21 @@ body {
 	font-weight: 700;
 	text-shadow: 0px 2px 2px #4a00e0;
 	margin-bottom: 1rem;
+	animation: slide-in 1s forwards 1.5s linear;
+	position: relative;
+	opacity: 0;
+}
+
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		right: -8rem;
+	}
+
+	to {
+		opacity: 1;
+		right: 0;
+	}
 }
 
 .main-header-content p {
@@ -194,18 +239,49 @@ body {
 	line-height: 1.5;
 	font-size: 1rem;
 	font-weight: 300;
+	animation: slide-in-p 1s forwards 2s linear;
+	position: relative;
+	opacity: 0;
+}
+
+@keyframes slide-in-p {
+	from {
+		opacity: 0;
+		left: -8rem;
+	}
+
+	to {
+		opacity: 1;
+		left: 0;
+	}
 }
 
 .main-header-content .link {
 	margin-bottom: 20rem;
 	text-decoration: none;
 	font-size: 1.2rem;
+	animation: pop 0.7s forwards 2.5s linear;
+	opacity: 0;
+}
+
+.link:hover {
+	color: #732eff;
+}
+
+@keyframes pop {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 /* end of header about */
 
 /* Media Queries */
-
+/* for toggle button break */
 @media (max-width: 850px) {
 	.toggle-btn {
 		display: flex;
@@ -241,5 +317,164 @@ body {
 
 	.ul-container li a {
 		padding: 0.5rem 1rem;
+	}
+}
+
+/* end for toggle button break */
+
+/* mobile 280px */
+
+@media all and (min-width: 275px) {
+	.info .email {
+		font-size: 0.8rem;
+	}
+
+	.socials a {
+		font-size: 1.5rem;
+		margin: 0.5rem 0;
+	}
+}
+
+/* end of mobile 280px */
+
+/* mobile 500px */
+
+@media all and (min-width: 500px) {
+	.info .email {
+		font-size: 1rem;
+	}
+
+	.socials a {
+		font-size: 2rem;
+	}
+}
+
+/* end of mobile 500px */
+
+/* mobile 600px */
+
+@media all and (min-width: 600px) {
+	.split-photos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: 5rem auto 5rem;
+		grid-template-areas:
+			"pc em"
+			"pc in";
+		align-content: center;
+		gap: 1rem;
+	}
+
+	.split-photos img {
+		grid-area: pc;
+		width: 40%;
+		grid-column: 1 / 3;
+	}
+
+	.info {
+		grid-area: em;
+		grid-column: 2 / 3;
+		width: 100%;
+		margin-top: 7rem;
+		margin-left: 0.5rem;
+	}
+
+	.simple-intro {
+		grid-area: in;
+		margin-top: 5rem;
+		grid-column: 2 / 3;
+		margin: 5rem 0 auto auto;
+		font-size: 1.5rem;
+		width: min(100%, 30rem);
+	}
+}
+
+/* end of mobile 600px */
+
+/* mobile 700px */
+
+@media all and (min-width: 700px) {
+	.simple-intro {
+		width: min(100%, 30rem);
+		font-size: 1.5rem;
+		margin-top: 8rem;
+	}
+}
+
+/* tablet 800px*/
+
+@media all and (min-width: 800px) {
+	.main-header-content h1 {
+		font-size: 2.5rem;
+	}
+
+	.split-photos {
+		width: 90%;
+	}
+
+	.split-photos img {
+		width: 30%;
+		margin-left: 6rem;
+	}
+
+	.simple-intro {
+		font-size: 2rem;
+		margin-top: 5rem;
+		width: min(100%, 25rem);
+	}
+
+	.info {
+		width: 70%;
+		margin-top: 4rem;
+		margin-left: 4rem;
+	}
+}
+
+/* end of mobile 800px */
+
+/* 900px */
+
+@media all and (min-width: 1000px) {
+	.split-content {
+		display: flex;
+		flex-direction: row;
+		margin: 2rem 0;
+		gap: 1.5;
+	}
+
+	.split-photos {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.split-photos img {
+		margin: 0;
+	}
+
+	.split-photos img {
+		width: 30%;
+		order: -1;
+	}
+
+	.info {
+		margin: 0;
+		width: 60%;
+		order: 3;
+	}
+
+	.simple-intro {
+		margin: 0 auto;
+		order: 2;
+		font-size: 1.5rem;
+		width: min(100%, 18rem);
+	}
+}
+
+/* end of 900px */
+
+@media all and (min-width: 1200px) {
+	.simple-intro {
+		font-size: 1.8rem;
+		width: 60%;
 	}
 }
