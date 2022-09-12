@@ -52,7 +52,6 @@ body {
 .ul-container {
 	list-style: none;
 	display: flex;
-	/* justify-content: space-between; */
 	text-align: center;
 	padding: 0.8rem;
 }
@@ -161,7 +160,7 @@ body {
 }
 
 .info {
-	width: 40%;
+	width: 50%;
 	padding: 0.5rem;
 	display: flex;
 	flex-direction: column;
