@@ -7,6 +7,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 /* Variables */
 :root {
 	/* colors */
@@ -18,11 +22,15 @@
 	--FF: "Ubuntu";
 }
 
+/* end of variables */
+
+/* skills */
 .skills {
 	margin-top: 2.3rem;
 	width: 100%;
 	min-height: 100vh;
 	/* background-color: var(--DARK-COLOR); */
+	scroll-margin-top: -2rem;
 }
 
 .skills-header {
@@ -31,25 +39,163 @@
 	flex-direction: column;
 	text-align: center;
 	position: relative;
+	animation: skills 1s forwards 3s linear;
+	/* opacity: 0; */
 }
+
+/* @keyframes skills {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+} */
 
 .skills-header h1 {
 	margin-top: 4rem;
-	font-size: 4.5rem;
+	font-size: 5.5rem;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	color: #ffffff;
-	text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
-		-2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5,
-		-2px 0px 0 #4074b5, 0px -2px 0 #4074b5, 2px 2px 2px rgba(223, 211, 224, 0),
-		2px 2px 2px rgba(223, 211, 224, 0), 2px 2px 2px rgba(223, 211, 224, 0);
+	text-shadow: 2px 2px 0 var(--DARK-COLOR), 2px -2px 0 var(--DARK-COLOR),
+		-2px 2px 0 var(--DARK-COLOR), -2px -2px 0 var(--DARK-COLOR),
+		2px 0px 0 var(--DARK-COLOR), 0px 2px 0 var(--DARK-COLOR),
+		-2px 0px 0 var(--DARK-COLOR), 0px -2px 0 var(--DARK-COLOR),
+		2px 2px 2px rgba(223, 211, 224, 0), 2px 2px 2px rgba(223, 211, 224, 0),
+		2px 2px 2px rgba(223, 211, 224, 0);
 	opacity: 0.5;
 }
 
-.skills-header h2 {
-	position: absolute;
-	top: 6rem;
-	left: 6.5rem;
-	color: var(--DARK-COLOR);
-	text-shadow: #e0e0e0 1px 1px 0, 2px 2px 2px var(--DARK-COLOR);
-	text-transform: uppercase;
+.skills-content {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
+
+.skills-box {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem auto;
+	border: 2px solid var(--DARK-COLOR);
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+		rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+	animation: skills-box 1.5s forwards 3.2s linear;
+	/* opacity: 0; */
+	position: relative;
+}
+
+/* @keyframes skills-box {
+	33% {
+		opacity: 0;
+		right: -4rem;
+	}
+
+	66% {
+		opacity: 0.5;
+		right: -2rem;
+	}
+
+	100% {
+		opacity: 1;
+		right: 0;
+	}
+} */
+
+.skills-box img {
+	width: 80%;
+	margin: 0 1rem;
+}
+
+.skills-box h1 {
+	font-family: var(--FF);
+	font-weight: 900;
+	text-shadow: #e0e0e0 1px 1px 0, 2px 2px 2px var(--DARK-COLOR);
+}
+
+/* skills progress bar */
+.progress {
+	width: 14rem;
+	height: 2rem;
+	background-color: #ccc;
+	margin-top: 0.5rem;
+	margin-bottom: 1.2rem;
+	border-radius: 15px;
+	overflow: hidden;
+	position: relative;
+}
+
+.progress--fill {
+	height: 100%;
+	border-radius: 15px;
+}
+.skills-content .skills-box:first-child .progress .progress--fill {
+	background-color: #e34c26;
+	width: 95%;
+}
+
+.skills-content .skills-box:nth-child(2) .progress .progress--fill {
+	background-color: #2965f1;
+	width: 85%;
+}
+.skills-content .skills-box:nth-child(3) .progress .progress--fill {
+	background-color: #8993be;
+	width: 90%;
+}
+.skills-content .skills-box:nth-child(4) .progress .progress--fill {
+	background-color: #be87f6;
+	width: 90%;
+}
+.skills-content .skills-box:nth-child(5) .progress .progress--fill {
+	background-color: #d4173b;
+	width: 95%;
+}
+.skills-content .skills-box:nth-child(6) .progress .progress--fill {
+	background-color: #21759b;
+	width: 85%;
+}
+.progress--text {
+	font-size: 1.2rem;
+	color: var(--PRIMARY-COLOR);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 40%;
+}
+
+/* end of progress bar */
+
+/* mobile 320px */
+
+@media all and (max-width: 319px) {
+	.skills-box {
+		width: 90%;
+	}
+}
+
+/* end of mobile 320px */
+
+/* mobile 500px */
+@media all and (min-width: 500px) {
+	.skills-content {
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+	}
+
+	.skills-box {
+		width: min(100%, 15rem);
+	}
+}
+
+/* end of mobile 500px */
+
+/* table 700px */
