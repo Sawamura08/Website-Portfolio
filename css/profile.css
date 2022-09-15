@@ -284,7 +284,6 @@ body {
 @media (max-width: 850px) {
 	.toggle-btn {
 		display: flex;
-		transition: 10s ease-in-out;
 	}
 
 	.nav-links {
@@ -302,7 +301,6 @@ body {
 	}
 
 	.ul-container {
-		/* margin-top: 1rem; */
 		flex-direction: column;
 		width: 100%;
 		border-top: solid 1px white;

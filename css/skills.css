@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap");
+
+/* Reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Variables */
+:root {
+	/* colors */
+	--PRIMARY-COLOR: #f8f7ff;
+	--SECONDARY-COLOR: #ffeedd;
+	--SEMI-DARK-COLOR: #b8b8ff;
+	--DARK-COLOR: #4a00e0;
+	--ALTERNATIVE-COLOR: #ffd8be;
+	--FF: "Ubuntu";
+}
+
+.skills {
+	margin-top: 2.3rem;
+	width: 100%;
+	min-height: 100vh;
+	/* background-color: var(--DARK-COLOR); */
+}
+
+.skills-header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	position: relative;
+}
+
+.skills-header h1 {
+	margin-top: 4rem;
+	font-size: 4.5rem;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #ffffff;
+	text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+		-2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5,
+		-2px 0px 0 #4074b5, 0px -2px 0 #4074b5, 2px 2px 2px rgba(223, 211, 224, 0),
+		2px 2px 2px rgba(223, 211, 224, 0), 2px 2px 2px rgba(223, 211, 224, 0);
+	opacity: 0.5;
+}
+
+.skills-header h2 {
+	position: absolute;
+	top: 6rem;
+	left: 6.5rem;
+	color: var(--DARK-COLOR);
+	text-shadow: #e0e0e0 1px 1px 0, 2px 2px 2px var(--DARK-COLOR);
+	text-transform: uppercase;
+}
