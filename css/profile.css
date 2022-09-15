@@ -181,6 +181,11 @@ body {
 
 .socials a {
 	color: var(--DARK-COLOR);
+	transition: transform 0.5s ease-in-out;
+}
+
+.socials a:is(:hover, :focus) {
+	transform: scale(1.5);
 }
 
 .simple-intro {
@@ -469,9 +474,28 @@ body {
 
 /* end of 900px */
 
+/* laptop 1200px */
 @media all and (min-width: 1200px) {
 	.simple-intro {
 		font-size: 1.8rem;
 		width: 60%;
 	}
 }
+
+/* end of laptop 1200px */
+
+/* Ipad 1150px */
+
+@media all and (min-height: 1150px) {
+	.split-photos img {
+		width: 40%;
+		margin-right: 5rem;
+	}
+
+	.split-photos {
+		margin: 2rem;
+		gap: 2rem;
+	}
+}
+
+/* end of Ipad 1150px */

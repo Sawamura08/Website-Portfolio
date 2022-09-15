@@ -10,7 +10,7 @@ const createNav = () => {
 			</a>
 			<div class="nav-links">
 				<ul class="ul-container">
-					<li><a href="/html/profile-first-page.html">About</a></li>
+					<li><a href="#about">About</a></li>
 					<li><a href="#skills">Skills</a></li>
 					<li><a href="#">Work</a></li>
 					<li><a href="#">Contact</a></li>
