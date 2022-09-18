@@ -250,7 +250,7 @@ html {
 
 @media all and (min-width: 1400px) {
 	.skills-box {
-		width: min(100%, 25rem);
+		width: min(100%, 20rem);
 	}
 }
 

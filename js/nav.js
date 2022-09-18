@@ -12,7 +12,7 @@ const createNav = () => {
 				<ul class="ul-container">
 					<li><a href="#about">About</a></li>
 					<li><a href="#skills">Skills</a></li>
-					<li><a href="#">Work</a></li>
+					<li><a href="#service">Service</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</div>

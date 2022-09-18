@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap");
+
+/* Reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Variables */
+:root {
+	/* colors */
+	--PRIMARY-COLOR: #f8f7ff;
+	--SECONDARY-COLOR: #ffeedd;
+	--SEMI-DARK-COLOR: #b8b8ff;
+	--DARK-COLOR: #4a00e0;
+	--ALTERNATIVE-COLOR: #ffd8be;
+	--FF: "Ubuntu";
+}
+
+/* Service */
+
+.service {
+	scroll-margin-top: 0.5rem;
+	margin-top: 3rem;
+	width: 100%;
+}
+
+.service-header {
+	margin: 0.5rem auto;
+	text-align: center;
+}
+
+.service-header h1 {
+	margin-top: 4rem;
+	font-size: 5rem;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #ffffff;
+	text-shadow: 2px 2px 0 var(--DARK-COLOR), 2px -2px 0 var(--DARK-COLOR),
+		-2px 2px 0 var(--DARK-COLOR), -2px -2px 0 var(--DARK-COLOR),
+		2px 0px 0 var(--DARK-COLOR), 0px 2px 0 var(--DARK-COLOR),
+		-2px 0px 0 var(--DARK-COLOR), 0px -2px 0 var(--DARK-COLOR),
+		2px 2px 2px rgba(223, 211, 224, 0), 2px 2px 2px rgba(223, 211, 224, 0),
+		2px 2px 2px rgba(223, 211, 224, 0);
+	opacity: 0.5;
+}
+
+.service-content {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+}
+
+.service-box {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 1rem auto;
+}
+
+.service-box-title {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	margin: 1rem auto;
+}
+
+.service-box-title img {
+	width: 20%;
+	padding: 0.5rem;
+	background-color: var(--DARK-COLOR);
+	color: var(--PRIMARY-COLOR);
+	border-radius: 50%;
+	margin: 0 1rem;
+}
+
+.service-box-title h2 {
+	font-size: 1.2rem;
+	margin: 1.2rem 0;
+	opacity: 0.7;
+}
+
+/* optional (if the logo is not align with the title )*/
+/* .service-content .service-box:first-child .service-box-title h2,
+.service-content .service-box:nth-child(3) .service-box-title h2,
+.service-content .service-box:nth-child(5) .service-box-title h2,
+.service-content .service-box:nth-child(6) .service-box-title h2 {
+	margin-top: 1.2rem;
+}
+ */
+
+.service-box p {
+	font-weight: 300;
+	line-height: 1.5;
+	margin: 1rem 0;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.service-box a {
+	font-size: 1rem;
+	color: var(--DARK-COLOR);
+	margin: 1rem 0;
+}
+
+.service-box a:is(:hover, :active) {
+	opacity: 0.5;
+}
+
+/* mobile 280px on width */
+
+@media all and (max-width: 280px) {
+	.service-header h1 {
+		font-size: 4.2rem;
+	}
+}
+
+/* end of mobile 280px on width */
+
+/* mobile 500px on width */
+
+@media all and (min-width: 500px) {
+	.service-box-title h2 {
+		margin: 2rem 0;
+		font-size: 1.5rem;
+	}
+}
+
+/* end of mobile 500px on width*/
+
+/* table 750px on width */
+
+@media all and (min-width: 750px) {
+	.service-content {
+		display: flex;
+		flex-flow: row wrap;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.service-box {
+		width: 45%;
+	}
+}
+
+/* end of tablet 750px on width*/
+
+/* laptop 1000px on width*/
+
+@media all and (min-width: 1000px) {
+	.service-box {
+		width: 33%;
+	}
+}
+
+/* end of laptop 1000px on width */
