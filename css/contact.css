@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap");
+
+/* Reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Variables */
+:root {
+	/* colors */
+	--PRIMARY-COLOR: #f8f7ff;
+	--SECONDARY-COLOR: #ffeedd;
+	--SEMI-DARK-COLOR: #b8b8ff;
+	--DARK-COLOR: #4a00e0;
+	--ALTERNATIVE-COLOR: #ffd8be;
+	--FF: "Ubuntu";
+}
+
+.contact {
+	width: 100%;
+	height: 100vh;
+	margin: 4rem 0;
+	scroll-margin-top: 4rem;
+	margin-bottom: 20rem;
+	animation: contact 1s forwards 3.7s linear;
+	opacity: 0;
+}
+
+@keyframes contact {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.contact-header {
+	margin: 0.5rem auto;
+	text-align: center;
+}
+
+.contact-header h1 {
+	margin-top: 4rem;
+	font-size: 5rem;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #ffffff;
+	text-shadow: 2px 2px 0 var(--DARK-COLOR), 2px -2px 0 var(--DARK-COLOR),
+		-2px 2px 0 var(--DARK-COLOR), -2px -2px 0 var(--DARK-COLOR),
+		2px 0px 0 var(--DARK-COLOR), 0px 2px 0 var(--DARK-COLOR),
+		-2px 0px 0 var(--DARK-COLOR), 0px -2px 0 var(--DARK-COLOR),
+		2px 2px 2px rgba(223, 211, 224, 0), 2px 2px 2px rgba(223, 211, 224, 0),
+		2px 2px 2px rgba(223, 211, 224, 0);
+	opacity: 0.5;
+}
+
+.contact-content {
+	display: flex;
+	flex-wrap: column;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin: 0 auto;
+}
+
+label {
+	font-size: 1.2rem;
+	margin: 1rem 0.7rem 0.5rem 0.7rem;
+	color: var(--DARK-COLOR);
+	font-family: var(--FF);
+}
+
+.input-container {
+	font-size: 1rem;
+	height: 3rem;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0.5rem;
+	border-radius: 20px;
+	outline: none;
+	border: 2px solid var(--DARK-COLOR);
+	font-family: var(--FF);
+	opacity: 0.5;
+}
+
+.Message {
+	font-size: 1rem;
+	height: 40%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0.5rem;
+	border-radius: 20px;
+	outline: none;
+	border: 2px solid var(--DARK-COLOR);
+	font-family: var(--FF);
+	border-bottom: 4rem;
+	opacity: 0.5;
+}
+
+.btn {
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 1rem;
+	margin: 2rem auto;
+	border-radius: 20px;
+	background: none;
+	border: 2px solid var(--DARK-COLOR);
+	color: var(--DARK-COLOR);
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+}
+
+.btn:is(:hover, :active) {
+	background-color: var(--DARK-COLOR);
+	color: var(--PRIMARY-COLOR);
+}
+
+/* tablet 750px  on width*/
+
+@media all and (min-width: 750px) {
+	form {
+		width: 70%;
+	}
+
+	.contact-header h1 {
+		font-size: 5rem;
+	}
+}
+
+/* tablet 750px on width */
+
+/* laptop 1000px on width  */
+
+@media all and (min-width: 1000px) {
+	form {
+		width: 50%;
+	}
+}
+
+/* end of laptop 1000px on width  */
